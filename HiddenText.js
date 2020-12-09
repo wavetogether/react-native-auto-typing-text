@@ -28,7 +28,7 @@ export default class HiddenText extends Component {
     const { fullText } = this.state;
     const { height: heightOnALine } = await this.measureView(this.refs.hiddenText, 'A');
 
-    let fullTextReadyToUse = fullText.replace(/\n/g, ' \n ');;
+    let fullTextReadyToUse = fullText.replace(/\n/g, ' \n ');
     const words = fullTextReadyToUse.split(' ');
     let tempArr = [];
     let lines = [];
@@ -46,7 +46,6 @@ export default class HiddenText extends Component {
     lines.push(tempArr.join(' '));
 
     if(onResult) {
-      console.log('lines', lines);
       onResult(lines.join(`\n`));
     }
   }
