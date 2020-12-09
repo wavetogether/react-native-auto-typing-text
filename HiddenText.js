@@ -46,7 +46,7 @@ export default class HiddenText extends Component {
     lines.push(tempArr.join(' '));
 
     if(onResult) {
-      onResult(lines.join(`\n`));
+      onResult(lines.join(`\n`).replace(/\n\n\n/g, '\n'));
     }
   }
 
