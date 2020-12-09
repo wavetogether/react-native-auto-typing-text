@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   Text,
   View
 } from 'react-native';
@@ -78,7 +77,7 @@ export default class AutotypingText extends Component {
   render() {
     let textShow = this.state.textShow;
     return (
-      <View style={[styles.flex1]}>
+      <>
         <Text { ...this.props }>
           {textShow}
         </Text>
@@ -87,13 +86,7 @@ export default class AutotypingText extends Component {
           { ...this.props }
           onResult={this._onResult}
         />
-      </View>
+      </>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  flex1: {
-    flex: 1,
-  }
-});
